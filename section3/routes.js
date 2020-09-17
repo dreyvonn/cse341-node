@@ -19,7 +19,7 @@ const requestHandler = (req, res) => {
         //event listener, when data is sent
         req.on('data', (chunk) => {
             body.push(chunk);
-            console.log(chunk);
+            // console.log(chunk);
         });
     
         //event listener, when request ends
