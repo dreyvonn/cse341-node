@@ -1,39 +1,22 @@
 const express = require('express');
+const bodyParser = require('body-parser');
+
 const router = express.Router();
 
-// console.log('in my prove01');
+router.use(bodyParser.urlencoded({extended: false}));
 
 router.use('/message',(req, res, next) => {
-    console.log('in message function');
-
     res.render('pages/p01out', { 
-        title: 'Prove 01 Assignment', 
+        title: 'Prove 01 Input', 
+        userInput1: req.body.message,
+        userInput2: req.body.message2,
         path: '/p01out',
     });
 });
 
 router.use('/', (req, res, next) => {
-    console.log('in the function');
-    // const body = [];
-    // req.on('data', (chunk) => {
-    //     body.push(chunk);
-    // });
-    
-    //     //event listener, when request ends
-    // req.on('end', () => {
-    //     const parsedBody = Buffer.concat(body).toString();
-    //     const message = parsedBody.split('=')[1];
-    //     console.log(message);
-    //     // fs.writeFile('message.txt', message, (err) => {
-    //     //         //response code
-    //     //     res.statusCode = 302
-    //     //     res.setHeader('Location', '/');
-    //     //         return res.end();
-    //     // });
-    // });
-
     res.render('pages/p01in', { 
-        title: 'Prove 01 Assignment', 
+        title: 'Prove 01 Output', 
         path: '/p01in',
     });
 });
