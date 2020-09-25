@@ -1,7 +1,6 @@
 //TA02 PLACEHOLDER
 // Remember, you can make more of these placeholders yourself! 
 const express = require('express');
-const { products } = require('../../section4/routes/admin');
 const router = express.Router();
 
 const users = [];
