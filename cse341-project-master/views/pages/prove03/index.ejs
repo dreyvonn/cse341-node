@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../../includes/header.ejs') %>
+</head>
+<body>
+    <%- include('../../includes/nav.ejs') %>
+    <div class="jumbotron text-center">
+        <div class="container">
+          <h2><%= title %> - Some Of My Favorite Artists</h2>
+        </div>
+    </div>
+    <div class="container">
+        <% if (artists.length > 0) { %>
+            <div>
+                <% for (let artist of artists) { %>
+                    <article>
+                        <header>
+                            <h1><%= artist.name %></h1>
+                        </header>
+                        <div>
+                            <img src="<%= artist.imageUrl %>"
+                                 alt="<%= artist.name %>"
+                                 style="width:500px;">
+                        </div><br>
+                        <div>
+                            <!-- <a href="/prove03/artist-details/<%= artist.id %>">Details</a><br> -->
+                            <form action="/prove03/artist-details/<%= artist.id %>" method="POST">
+                                <button type="submit">Details</button>
+                            </form>
+                        </div>
+                    </article>
+                <% } %>
+            </div>
+        <% } else { %>
+            <h1>No Artists Found!</h1>
+        <% } %>
+    </div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+[
+  {
+    "imageUrl": "https://i2.wp.com/substreammagazine.com/wp-content/uploads/2018/06/DGD_LindseyByrnes.jpg?fit=6016%2C4016&ssl=1",
+    "genre": "Post Hardcore",
+    "name": "Dance Gavin Dance",
+    "description": "Cool tunes for cool dudes",
+    "id": "454361"
+  },
+  {
+    "imageUrl": "https://th.bing.com/th/id/OIP.cpJybegdYpmI8urkbVo1zwHaE5?pid=Api&rs=1",
+    "genre": "Less Hardcore",
+    "name": "Brand New",
+    "description": "Songs that make you feel",
+    "id": "52740395823"
+  },
+  {
+    "imageUrl": "https://cdn.baeblemusic.com/bandcontent/tender/tenderblog-498.jpg",
+    "genre": "Vibes",
+    "name": "TENDER",
+    "description": "Music that is good on a rainy day",
+    "id": "249387569"
+  },
+  {
+    "imageUrl": "https://talkmusictome.files.wordpress.com/2015/03/wpid-story-so-far.jpeg",
+    "genre": "Rock",
+    "name": "The Story So Far",
+    "description": "Classic music that tugs at the heart strings",
+    "id": "843752902"
+  },
+  {
+    "imageUrl": "https://th.bing.com/th/id/OIP.RUVzD5fJ_8porPL0fLXq0gHaE8?pid=Api&rs=1",
+    "genre": "Alternative Rock",
+    "name": "Manchester Orchestra",
+    "description": "Slow songs that will most likely make you cry",
+    "id": "4752098"
+  }
+]
