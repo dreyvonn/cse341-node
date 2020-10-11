@@ -1,15 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <%- include('../../includes/header.ejs') %>
+    <%- include('../../../includes/project-header.ejs') %>
 </head>
 <body>
-    <%- include('../../includes/nav.ejs') %>
-    <div class="jumbotron text-center">
-        <div class="container">
-          <h2><%= title %> - Some Of My Favorite Artists</h2>
-        </div>
-    </div>
+    <%- include('../../../includes/project-nav.ejs') %>
     <div class="container">
         <% if (artists.length > 0) { %>
             <div>
@@ -24,9 +19,10 @@
                                  style="width:500px;">
                         </div><br>
                         <div>
-                            <!-- <a href="/prove03/artist-details/<%= artist.id %>">Details</a><br> -->
-                            <form action="/prove03/artist-details/<%= artist.id %>" method="POST">
-                                <button type="submit">Details</button>
+                            <a href="/project/admin/edit-artist/<%= artist._id %>?edit=true" class="btn">Edit</a>
+                            <form action="/project/admin/delete-artist" method="POST">
+                                <br><input type="hidden" value="<%= artist._id %>" name="artistId">
+                                <button class="btn" type="submit">Delete</button>
                             </form>
                         </div>
                     </article>
