@@ -18,6 +18,12 @@
             <div>
                 <h3>Genre: <%= artist.genre %></h3>
                 <p><%= artist.description %></p>
+                <% if (isAuthenticated) { %>
+                    <form action="/project/cart" method="post">
+                        <button class="btn" type="submit">Add to Cart</button>
+                        <input type="hidden" name="artistId" value="<%= artist._id %>">
+                    </form>
+                <% } %>
             </div>
         </article>
     </div>

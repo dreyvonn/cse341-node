@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <% include ../includes/header.ejs %>
+</head>
+
+<body>
+  <% include ../includes/nav.ejs %>
+<div class="jumbotron text-center" <% if (style) { %> style="background-color: black;" <% } %>>
+  <div class="container">
+    <h1 <% if (style) { %> style="color: red" <% } %>><%= title %></h1>
+  </div>
+</div>
+<div class="container">
+  <form action="/ta05/change-style" method="POST">
+    <button type="submit">Change Style</button>
+    <h1>Counter: <%= counter %></h1>
+  </form>
+  <form action="/ta05/counter" method="POST">
+    <input type="hidden" value="true" name="increase">
+    <button type="submit">Increase Counter</button>
+  </form><br>
+  <form action="/ta05/counter" method="POST">
+    <input type="hidden" value="true" name="decrease">
+    <button type="submit">Decrease Counter</button>
+  </form><br><br>
+  <form action="/ta05/destroy" method="POST">
+    <button type="submit">Destroy Session</button>
+  </form>
+</div>
+
+
+</body>
+</html>
