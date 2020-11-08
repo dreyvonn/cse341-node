@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <% include ../../includes/header.ejs %>
+</head>
+
+<body>
+  <% include ../../includes/nav.ejs %>
+  <div class="jumbotron text-center">
+    <div class="container">
+      <h1><%= title %></h1>
+    </div>
+  </div>
+  <div class="container">
+    <form action="/prove08/search-product/?page=1" method="POST">
+      <input type="text" name="searchName">
+      <button type="submit">Click Here to Search</button>
+    </form>
+    <% if (products.length > 0) { %>
+    <div>
+      <% for (i = (page * 10) - 10; i < (page * 10); i++) { %>
+      <article>
+        <header>
+          <h1><%= products[i].name %></h1>
+        </header>
+        <div>
+          <img src="<%= products[i].imageUrl %>" style="width:400px;" alt="<%= products[i].title %>">
+        </div>
+        <div>
+          <h2>$<%= products[i].price %></h2>
+          <p><%= products[i].description %></p><br>
+        </div>
+      </article>
+      <% } %>
+    </div>
+    <section>
+      <% for (i = 1; i <= length; i++) { %>
+        <a href="<% if (searching) { %>/prove08/search-product/?page=<%= i %><% } else { %>/prove08/?page=<%= i %><% } %>"><%= i %></a>
+      <% } %>
+      <% if (remain > 0) { %>
+        <a href="<% if (searching) { %>/prove08/search-product/?page=<%= i %><% } else { %>/prove08/?page=<%= i %><% } %>"><%= i %></a>
+      <% } %>
+    </section>
+    <% } else { %>
+    <h1>No Products Found!</h1>
+    <% } %>
+  </div>
+
+</body>
+
+</html>
